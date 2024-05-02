@@ -11966,6 +11966,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+text-justify {
+  text-align: justify;
+}
+
 html {
   position: fixed;
   margin: 0;
@@ -12012,14 +12016,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-header {
-  position: fixed; /* Position fixe pour la barre de navigation */
-  top: 0; /* Coller la barre de navigation en haut de la fenêtre */
-  left: 0; /* Coller la barre de navigation tout à gauche */
-  width: 100%; /* Utiliser toute la largeur de l'écran */
-  z-index: 1000; /* Assurer que la barre de navigation est au-dessus des autres éléments */
 }
 
 footer div .col-6 {
