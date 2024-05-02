@@ -54,3 +54,20 @@ p{
 footer div .col-6{
     overflow-wrap: break-word;
 }
+footer.footer {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media query for smaller screen sizes (e.g., mobile devices) */
+@media screen and (max-width: 1000px) {
+    footer.footer {
+        position: static; /* Change positioning to static for smaller screens */
+    }
+
+    main {
+        margin-bottom: 100px; /* Adjust margin-bottom of main for smaller screens */
+    }
+}
