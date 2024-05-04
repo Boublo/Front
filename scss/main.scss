@@ -11,6 +11,7 @@ html{
     min-height: 100%;
 }
 main{
+    margin-top: 56px;
     margin-bottom: 223px;
 }
 footer.footer{
@@ -69,5 +70,42 @@ footer.footer {
 
     main {
         margin-bottom: 100px; /* Adjust margin-bottom of main for smaller screens */
+    }
+}
+
+/* Media query for smaller screen sizes (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+    footer.footer {
+        position: static; /* Change positioning to static for smaller screens */
+    }
+
+    main {
+        margin-bottom: 50px; /* Adjust margin-bottom of main for smaller screens */
+    }
+}
+
+.image-card{
+    position: relative;
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+    
+
+        img{
+            filter: brightness(0.3);
+        }
+    }
+
+        img{
+            transition: all 0.3s;
+    }
+
+        .titre-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
     }
 }

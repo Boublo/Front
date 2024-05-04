@@ -11978,6 +11978,7 @@ html {
 }
 
 main {
+  margin-top: 56px;
   margin-bottom: 223px;
 }
 
@@ -12037,4 +12038,32 @@ footer.footer {
   main {
     margin-bottom: 100px; /* Adjust margin-bottom of main for smaller screens */
   }
+}
+/* Media query for smaller screen sizes (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+  footer.footer {
+    position: static; /* Change positioning to static for smaller screens */
+  }
+  main {
+    margin-bottom: 50px; /* Adjust margin-bottom of main for smaller screens */
+  }
+}
+.image-card {
+  position: relative;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
+}
+.image-card img {
+  transition: all 0.3s;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */
