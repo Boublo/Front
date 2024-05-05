@@ -88,7 +88,8 @@ footer.footer {
 .image-card{
     position: relative;
     &:hover{
-        .titre-image{
+        .titre-image,
+        .action-image-buttoms{
             opacity: 1;
         }
     
@@ -107,6 +108,16 @@ footer.footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    .action-image-buttoms{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
         opacity: 0;
     }
 }
