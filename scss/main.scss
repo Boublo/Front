@@ -1,5 +1,6 @@
 @import url('/node_modules/bootstrap-icons/font/bootstrap-icons.css');
 @import 'custom';
+@import url('/node_modules/animate.css/animate.css');
 
 text-justify{
     text-align: justify;
@@ -130,4 +131,12 @@ footer.footer {
         color: $black;
         padding: 10px;
     }
+}
+.carousel-inner img{
+    height: 500px;
+}
+
+.card .card-img-top{
+    height: 200px;
+    object-fit: cover;
 }
