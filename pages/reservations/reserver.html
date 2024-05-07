@@ -37,8 +37,8 @@
               </div>
         </div>
         <div class="mb-3">
-            <label for="slectHour" class="form-label"></label>
-            <select class="form-select" id="selectHour">
+            <label for="SlectHour" class="form-label"></label>
+            <select class="form-select" id="SelectHour">
                 <option>19:30</option>
                 <option>19:45</option>
                 <option>20:15</option>
@@ -48,9 +48,61 @@
                 <option>21:30</option>
               </select>
         </div>
+        <div class="mb-3">
+            <label for="SlectMenu" class="form-label">Menu</label>
+            <select class="form-select" id="Selectmenu">
+                <option>K/1</option>
+                <option>K/2</option>
+                <option>K/3</option>
+              </select>
+        </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Reserver</button>
-            <button type="button" class="btn btn-danger">Annuler</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Annuler</button>
         </div>
     </form>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <form>
+                    <div class="mb-3">
+                        <label for="NomInput" class="form-label">Nom</label>
+                        <input disabled type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="john">
+                    </div>
+                    <div class="mb-3">
+                        <label for="PrenomInput" class="form-label">Prénom</label>
+                        <input disabled  type="text" class="form-control" id="PrenomInput" placeholder="Votre Prenom" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="AllergieInput" class="form-label">Allergie</label>
+                        <input disabled  type="email" class="form-control" id="AllergieInput" placeholder="Vos Allergies (Fruit de mers, arachides..)?" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="DateInput" class="form-label">Date</label>
+                        <input disabled  type="date" class="form-control" id="DateInput">
+                    </div>
+                    <div class="mb-3">
+                        <label for="PrenomInput" class="form-label">Prénom</label>
+                        <input disabled  type="text" class="form-control" id="PrenomInput" placeholder="Votre Prenom" value="">
+                    </div>                    <div class="mb-3">
+                        <label for="PrenomInput" class="form-label">Prénom</label>
+                        <input disabled  type="text" class="form-control" id="PrenomInput" placeholder="Votre Prenom" value="">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">annuler</button>
+        </div>
+      </div>
+    </div>
+  </div>
