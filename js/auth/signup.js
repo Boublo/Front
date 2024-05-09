@@ -5,21 +5,22 @@ const inputNom = document.getElementById("NomInput")
 const inputPreNom = document.getElementById("PrenomInput")
 const inputMail = document.getElementById("EmailInput")
 const inputPassword = document.getElementById("PasswordInput")
-const inputvalidatePasswordInput = document.getElementById("validatePasswordInput")
+const inputValidatePassword = document.getElementById("validatePasswordInput")
 const btnValidation = document.getElementById("btn-validation-inscription")
 
 inputNom.addEventListener("keyup", validateForm);
 inputPreNom.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
-inputvalidatePasswordInput.addEventListener("keyup", validateForm);
+inputValidatePassword.addEventListener("keyup", validateForm);
 
 function validateForm() {
     const nonOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPreNom);
     const mailOk = validateMail(inputMail);
+    const passwordOk = validatePassword(inputPassword);
 
-    if(nonOk && prenomOk && mailOk){
+    if(nonOk && prenomOk && mailOk && passwordOk){
         btnValidation.disabled = false;
     }
     else{
@@ -27,45 +28,45 @@ function validateForm() {
     }
 }
 
-function validatePassword(){
+function validatePassword(input){
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
-    const passwordUser = inputPassword.value;
-    if(passwordUser .match(passwordRegex)){
-        inputPassword.classList.add("is-valid");
-        inputPassword.classList.remove("is-invalid");
+    const passwordUser = input.value;
+    if(passwordUser.match(passwordRegex)){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
         return true;
     }
     else{
-        inputPassword.classList.add("is-invalid");
-        inputPassword.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        input.classList.remove("is-valid");
         return false;
     }
 }
 
-function validateMail(){
+function validateMail(input){
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const mailUser = inputMail.value;
-    if(mailUser .match(emailRegex)){
-        inputMail.classList.add("is-valid");
-        inputMail.classList.remove("is-invalid");
+    const mailUser = input.value;
+    if(mailUser.match(emailRegex)){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
         return true;
     }
     else{
-        inputMail.classList.add("is-invalid");
-        inputMail.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        input.classList.remove("is-valid");
         return false;
     }
 }
 
-function validateRequired(inputNom){
-    if(inputNom.value != ''){
-        inputNom.classList.add("is-valid");
-        inputNom.classList.remove("is-invalid");
+function validateRequired(input){
+    if(input.value != ''){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
         return true;
     }
     else{
-        inputNom.classList.add("is-invalid");
-        inputNom.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        input.classList.remove("is-valid");
         return false;
     }
 }

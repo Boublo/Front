@@ -16,10 +16,19 @@
         <div class="mb-3">
             <label for="EmailInput" class="form-label">Email</label>
             <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.com">
+            <div class="invalid-feedback">
+                Mail pas au bon format
+            </div>
         </div>
         <div class="mb-3">
             <label for="PasswordInput" class="form-label">Password</label>
             <input type="password" class="form-control" id="PasswordInput">
+            <div class="invalid-feedback">
+                Le mot de passe est pas assez robuste: au moins 8 caractere, comprenant au moins 1 letrre minuscule majusclue et un caractere special
+            </div>
+            <div class="valid-feedback">
+                mdp robuste!
+            </div>
         </div>
         <div class="mb-3">
             <label for="validatePasswordInput" class="form-label">Confirmez Password</label>
