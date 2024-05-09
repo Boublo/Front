@@ -4,7 +4,7 @@
 const inputNom = document.getElementById("NomInput")
 const inputPreNom = document.getElementById("PrenomInput")
 const inputMail = document.getElementById("EmailInput")
-const inputPassword = document.getElementById("EmailInput")
+const inputPassword = document.getElementById("PasswordInput")
 const inputvalidatePasswordInput = document.getElementById("validatePasswordInput")
 const btnValidation = document.getElementById("btn-validation-inscription")
 
@@ -24,6 +24,21 @@ function validateForm() {
     }
     else{
         btnValidation.disabled = true;
+    }
+}
+
+function validatePassword(){
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
+    const passwordUser = inputPassword.value;
+    if(passwordUser .match(passwordRegex)){
+        inputPassword.classList.add("is-valid");
+        inputPassword.classList.remove("is-invalid");
+        return true;
+    }
+    else{
+        inputPassword.classList.add("is-invalid");
+        inputPassword.classList.remove("is-valid");
+        return false;
     }
 }
 
