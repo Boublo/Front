@@ -14,13 +14,27 @@ inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidatePassword.addEventListener("keyup", validateForm);
 
+function validateConfirmationPassword(inputpwd, inputConfirmPwd){
+    if(inputpwd.value === inputConfirmPwd.value){
+        inputConfirmPwd.classList.add("is-valid");
+        inputConfirmPwd.classList.remove("is-invalid");
+        return true;
+    }
+    else{
+        inputConfirmPwd.classList.add("is-invalid");
+        inputConfirmPwd.classList.remove("is-valid");
+        return false;
+    }
+}
+
 function validateForm() {
     const nonOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPreNom);
     const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
+    const confirmationPasswordOk = validateConfirmationPassword(inputPassword, inputValidatePassword);
 
-    if(nonOk && prenomOk && mailOk && passwordOk){
+    if(nonOk && prenomOk && mailOk && passwordOk && confirmationPasswordOk){
         btnValidation.disabled = false;
     }
     else{
