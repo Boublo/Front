@@ -12,7 +12,7 @@ function checkCredentials() {
         setToken(token);
         //placer ce token en cookie
 
-        setCookie('role', 'admin', 7);
+        setCookie('role', 'client', 7);
         window.location.replace('/');
 }
 else {
